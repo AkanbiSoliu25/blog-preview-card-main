@@ -1,50 +1,119 @@
 :root {
-    --yellow: hsl(47, 88%, 63%);
-    --white: hsl(0, 0%, 100%);
-    --gray-500: hsl(0, 0%, 42%);
-    --gray-950: hsl(0, 0%, 7%);
-
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
 }
 
 body {
-    font-family: "Figtree", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
-    width: 100vw;
-    background-color: var(--yellow)
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Figtree", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  font-size: 14px;
+  background-color: var(--yellow);
+  color: var(--gray-950);
+  margin: 0;
+  padding: 0;
 }
 
+.container-shadow {
+  position: relative;
+  top: 15px;
+  left: 10px;
+  width: 335px;
+  height: 464px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+/* main content */
 .container {
-    background-color: var(--white);
-    width: 225px;
-    padding: 15px;
-    border-radius: 10px;
+  position: absolute;
+  top: -10px;
+  left: -6px;
+  background-color: var(--white);
+  width: 300px;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 20px;
 }
 
-.container body {
-    color: var(--gray-500);
+.container img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-.profile-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.container button {
+  background-color: var(--yellow);
+  border-style: none;
+  border-radius: 3px;
+  padding: 5px 15px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.profile-container img {
-    width: 25px;
-    height: auto;
+.container button:hover {
+  color: white;
+  background-color: black;
+  transition: all 300ms ease-in-out;
+  animation: pump 300ms infinite;
 }
 
-.profile-container p {
-    font-weight : 700;
+@keyframes pump {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;
+  }
+}
+
+.container .date {
+  font-weight: 600;
+}
+
+.container h1 {
+  color: var(--gray-950);
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 300ms ease-in-out;
+}
+
+.container h1:hover {
+  color: var(--yellow);
+}
+
+.container .content {
+  color: var(--gray-500);
+  line-height: 1.4rem;
+}
+
+/* profile */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  width: 25px;
+  height: auto;
+  margin: 0;
+}
+
+.profile p {
+  font-weight: 800;
+}
+
+/* attribution */
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
